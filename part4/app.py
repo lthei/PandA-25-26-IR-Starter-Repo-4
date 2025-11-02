@@ -91,7 +91,7 @@ def combine_results(result1, result2):
         else:  # if the line is new (only in result2), add it to the merged list
             merged_line_matches.append(line2)
     # sort merged line matches by line number
-    merged_line_matches.sort(key=lambda x: x["line_no"]) # needed for ex. 4
+    merged_line_matches.sort(key=lambda x: x["line_no"]) # uses the .sort function with key being the line numbers (extracted via the lambda function)
 
     # total
     total = len(merged_title_spans) + sum(
